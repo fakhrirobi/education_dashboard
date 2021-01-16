@@ -61,14 +61,19 @@ def data_load() :
 
     return data,indo
 def plot(option,data,indo,size) : 
-    fig,ax = plt.subplots()
-    plt.title('Angka Partisipasi Kasar Laki dan Perempuan di PT tahun {}'.format(str(option)))
-    # divider = make_axes_locatable(ax)
-    # cax = divider.append_axes('right', size='5%',pad=0.1)
 
+    fig,ax = plt.subplots()
+    plt.title('Angka Partisipasi Kasar Laki dan Perempuan di PT tahun {}'.format(str(option)),fontfamily='oswald',fontsize=15)
+    # divider = make_axes_locatable(ax)
+    # cax = divider.append_axes('right', size='5%',pad=0.1,sharex=data[str(option)])
+    #creating colorbar
+    
 
     indo.boundary.plot(ax=ax,color='DarkSlateBlue')
-    data.plot(cmap='Greens',column='{}'.format(str(option)),legend=False,ax=ax,s=size,alpha=0.7)
+    data_plot = data.plot(cmap='Greens',column='{}'.format(str(option)),legend=True,ax=ax,s=size,alpha=0.7)
+    # cbar = ax.figure.colorbar(np.array(data[f'{option}']),ax=ax)
+    array_ = np.array([x for x in data[f'{option}']])
+   
     st.pyplot(fig)
 if __name__ == '__main__': 
     
