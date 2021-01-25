@@ -15,7 +15,7 @@ def data_load() :
     data_1.dropna(inplace=True)
 
 
-    maps_point = pd.read_json(r'E:\PROJECT\DatSci\bps_dashboard\maps.json')
+    maps_point = pd.read_json(r'maps.json')
 
 
     data_1.drop(35,axis=0,inplace=True)
