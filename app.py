@@ -9,7 +9,7 @@ pd.options.display.max_rows = 999
 pd.options.display.max_columns = 999
 
 def data_load() : 
-    data_1 = pd.read_excel(r'E:\PROJECT\DatSci\bps_dashboard\partisipasi pendidikan\Rasio Angka Partisipasi Kasar (APK) Perempuan_Laki-Laki di Tingkat Perguruan Tinggi Menurut Provinsi.xlsx',engine='openpyxl')
+    data_1 = pd.read_excel('Rasio Angka Partisipasi Kasar (APK) Perempuan_Laki-Laki di Tingkat Perguruan Tinggi Menurut Provinsi.xlsx',engine='openpyxl')
 
 
     data_1.dropna(inplace=True)
@@ -28,7 +28,7 @@ def data_load() :
     'Unnamed: 2':'2019','Unnamed: 3':'2018'},inplace=True)
 
 
-    data_2  = pd.read_excel(r'E:\PROJECT\DatSci\bps_dashboard\partisipasi pendidikan\Rasio Angka Partisipasi Kasar (APK) Perempuan_Laki-Laki di Tingkat Perguruan Tinggi Menurut Provinsi_2015.xlsx',engine='openpyxl')
+    data_2  = pd.read_excel(r'Rasio Angka Partisipasi Kasar (APK) Perempuan_Laki-Laki di Tingkat Perguruan Tinggi Menurut Provinsi_2015.xlsx',engine='openpyxl')
     data_2.dropna(inplace=True)
 
     data_2.rename(columns={'Rasio Angka Partisipasi Kasar (APK) Perempuan/Laki-Laki di Tingkat Perguruan Tinggi Menurut Provinsi':'2017',
@@ -51,7 +51,7 @@ def data_load() :
 
     #reading shapely file 
 
-    indonesia = gpd.read_file(r'E:\PROJECT\DatSci\bps_dashboard\indonesia-geojson-master\indonesia-geojson-master\indonesia-province\INDONESIA_PROP.shp')
+    indonesia = gpd.read_file(r'INDONESIA_PROP.shp')
 
 
 
