@@ -70,7 +70,7 @@ def plot(option,data,indo,size) :
     
 
     indo.boundary.plot(ax=ax,color='DarkSlateBlue')
-    data_plot = data.plot(cmap='Greens',column='{}'.format(str(option)),legend=True,ax=ax,s=size,alpha=0.7)
+    data_plot = data.plot(cmap='Greens',column='{}'.format(str(option)),legend=False,ax=ax,s=size,alpha=0.7)
     # cbar = ax.figure.colorbar(np.array(data[f'{option}']),ax=ax)
     array_ = np.array([x for x in data[f'{option}']])
    
