@@ -1,0 +1,6 @@
+numpy==1.19.5
+matplotlib==3.3.3
+geopandas==0.8.1
+Shapely==1.7.1
+streamlit==0.74.1
+pandas==1.2.0
